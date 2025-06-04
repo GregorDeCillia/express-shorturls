@@ -6,9 +6,13 @@ app.use(cors({ origin: 'https://www.freecodecamp.org' }));
 
 const urls = [];
 const addUrl = url => urls.push(url) - 1;
+const isValidUrl = url => /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/.test(url);
 
 app.post('/api/shorturl', (req, res) => {
     const url = req.body.url;
+    if (!isValidUrl(url)) {
+        return res.status(400).json({ error: 'invalid url' });
+    }
     res.status(201).json({ original_url: url, short_url: addUrl(url) })
 })
 
