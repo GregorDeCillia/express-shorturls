@@ -26,11 +26,11 @@ app.get('/api/shorturl/:id', (req, res) => {
     }
 })
 
-app.get("/", (req, res) => {
-    res.sendFile(process.cwd() + '/index.html');
-})
+app.get("/", (_req, res) =>
+    res.sendFile(process.cwd() + '/index.html'));
 
-app.use(express.static('public'));
+app.get("/style.css", (_req, res) =>
+    res.sendFile(process.cwd() + '/style.css'));
 
 app.listen(3000, () => console.log("Server ready on port 3000."));
 
