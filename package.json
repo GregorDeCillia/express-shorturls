@@ -17,6 +17,7 @@
   "homepage": "https://github.com/GregorDeCillia/express-shorturls#readme",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0"
   }
 }
