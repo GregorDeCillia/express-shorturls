@@ -42,3 +42,8 @@ input[type='text'] {
   width: 220px;
   text-align: center;
 }
+
+form:invalid input[type='submit'] {
+  color: #666;
+  cursor: not-allowed;
+}
