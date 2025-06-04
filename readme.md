@@ -4,7 +4,7 @@ My submission for the [URL Shortener Microservice](https://www.freecodecamp.org/
 
 ## Deployed Project
 
-This project is deployed and can be accessed at the following URL: <https://url-shortener.vercel.app/>
+This project is deployed and can be accessed at the following URL: <https://express-shortener.vercel.app/>
 
 ## Technologies Used
 

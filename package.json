@@ -1,7 +1,7 @@
 {
   "name": "express-shorturls",
+  "deployment": "https://express-shortener.vercel.app/",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "start": "node api/index.js"
   },
