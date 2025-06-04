@@ -11,7 +11,7 @@ const isValidUrl = url => /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-
 app.post('/api/shorturl', (req, res) => {
     const url = req.body.url;
     if (!isValidUrl(url)) {
-        return res.status(400).json({ error: 'invalid url' });
+        return res.json({ error: 'invalid url' });
     }
     res.status(201).json({ original_url: url, short_url: addUrl(url) })
 })
