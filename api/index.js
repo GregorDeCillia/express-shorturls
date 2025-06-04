@@ -7,10 +7,6 @@ app.use(cors({ origin: 'https://www.freecodecamp.org' }));
 const urls = [];
 const addUrl = url => urls.push(url) - 1;
 
-app.get('/api/hello', (req, res) => {
-    res.json({ message: 'Hello from Express on Vercel!' });
-});
-
 app.post('/api/shorturl', (req, res) => {
     const url = req.body.url;
     res.status(201).json({ original_url: url, short_url: addUrl(url) })
